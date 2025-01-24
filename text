@@ -1,0 +1,7 @@
+npm install --global gulp-cli
+
+npm init -y
+
+npm install gulp gulp-sass sass gulp-clean-css gulp-rename --save-dev
+
+gulp
