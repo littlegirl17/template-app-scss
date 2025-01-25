@@ -1,5 +1,7 @@
+@use 'color' as *;
+
 .header_home_mobile {
-    background-color: #fee3f2;
+    background-color: $background-color-1;
 
     .header_item_mobile {
         display: flex;
@@ -7,8 +9,18 @@
         align-items: center;
         padding: 10px 0;
 
-        i {
+        .fa-bars {
+            background-color: #ffffff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            padding: 10px;
+            text-align: center;
             font-size: 30px;
+        }
+
+        .fa-bag-shopping {
+            font-size: 25px;
             color: #000000;
         }
 
@@ -44,7 +56,7 @@
                 top: 50%;
                 right: 10px;
                 transform: translateY(-50%);
-                background-color: #fee3f2;
+                background-color: $background-color-1;
                 color: #888;
                 border-radius: 50%;
                 padding: 7px;
@@ -56,21 +68,22 @@
         .header_cart_mobile {
             position: relative;
             text-decoration: none;
-            padding-right: 5px;
+            padding-right: 10px;
 
             span {
                 position: absolute;
                 top: -15px;
-                left: 16px;
+                left: 14px;
                 background-color: #ff0000;
-                color: #fee3f2;
+                color: $background-color-1;
                 padding: 5px;
-                max-width: 25px;
-                max-height: 25px;
+                max-width: 23px;
+                max-height: 23px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 border-radius: 50%;
+                font-size: 12px;
             }
         }
     }
