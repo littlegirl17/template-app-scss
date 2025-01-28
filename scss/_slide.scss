@@ -1,0 +1,32 @@
+.swiper-button-prev,
+.swiper-button-next {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+.swiper-button-next::after {
+    font-size: 22px;
+    background-color: #e9e7e7;
+    color: #696161;
+    padding: 7px 10px 7px 12px;
+    border-radius: 50%;
+}
+
+.swiper-button-prev::after {
+    font-size: 22px;
+    background-color: #e9e7e7;
+    color: #696161;
+    padding: 7px 12px 7px 10px;
+    border-radius: 50%;
+}
+
+.banner_mobile {
+    &:hover {
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            opacity: 1;
+        }
+    }
+}

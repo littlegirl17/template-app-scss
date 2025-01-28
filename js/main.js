@@ -6,3 +6,18 @@ window.addEventListener("scroll", function () {
     headerSearch.classList.remove("fixed");
   }
 });
+
+//-------------------swiper
+
+const swiper_1 = new Swiper(".banner_mobile", {
+  loop: true, // Vòng lặp
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  speed: 800,
+});
