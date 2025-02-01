@@ -1,0 +1,94 @@
+@use 'color' as *;
+@use 'mixinStyle' as *;
+
+.product {
+    .product_title {
+        padding: 10px 0;
+
+        h2 {
+            font-size: 18px;
+            margin: 0 0;
+        }
+    }
+
+    .product_box_mobile {
+        .product_item_mobile {
+            background-color: #fff;
+            border-radius: 15px;
+
+            .product_item_image_mobile {
+                width: 160px;
+                height: 150px;
+                padding: 10px;
+                @include flexCenter();
+
+                img {
+                    width: auto;
+                    height: 100%;
+                    max-width: none;
+                }
+            }
+
+            .product_item_content_mobile {
+                padding: 0 10px;
+                height: 130px;
+
+                .product_content_title {
+                    h2 {
+                        overflow-wrap: break-word;
+                        max-width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        -webkit-line-clamp: 1;
+                        display: block;
+                        font-size: 13px;
+                        font-weight: 700;
+                        padding: 10px 0 5px 0;
+                        margin: 0 0;
+                    }
+
+                    span {
+                        font-size: 12px;
+                        white-space: pre-wrap;
+                        overflow-wrap: break-word;
+                        max-width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        display: -webkit-box !important;
+                        padding-bottom: 5px;
+                    }
+                }
+
+                .product_content_price {
+                    .old {
+                        text-decoration: line-through;
+                        color: #747474;
+                        font-size: 13px;
+                    }
+
+                    .new {
+                        font-weight: 500;
+                        color: $background-color-2;
+                    }
+                }
+            }
+
+            .btn_product_mobile {
+                padding: 0px 10px 10px 10px;
+
+                .btn_item_product {
+                    background-color: $background-color-2;
+                    color: #fff;
+                    outline: none;
+                    border: none;
+                    width: 100%;
+                    border-radius: 10px;
+                    padding: 1px 0 3px 0;
+                }
+            }
+        }
+    }
+}
