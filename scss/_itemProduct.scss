@@ -17,15 +17,12 @@
             border-radius: 15px;
 
             .product_item_image_mobile {
-                width: 160px;
                 height: 150px;
                 padding: 10px;
                 @include flexCenter();
 
                 img {
-                    width: auto;
-                    height: 100%;
-                    max-width: none;
+                    @include imageStyle();
                 }
             }
 
@@ -69,12 +66,13 @@
                     .old {
                         text-decoration: line-through;
                         color: #747474;
-                        font-size: 13px;
+                        font-size: 11px;
                     }
 
                     .new {
                         font-weight: 500;
                         color: $background-color-2;
+                        font-weight: 14px;
                     }
                 }
             }
