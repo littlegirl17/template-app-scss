@@ -31,3 +31,51 @@ const swiperProduct = new Swiper(".product_box_mobile", {
   grabCursor: true,
   centeredSlides: false,
 });
+
+//------------------------------
+function showModalProduct() {
+  const modalProduct = document.getElementById("modalProduct");
+  const overlay = document.getElementById("overlay_btn");
+  modalProduct.classList.add("show"); // Thêm lớp 'show' để modal hiển thị
+  modalProduct.style.pointerEvents = "auto";
+  overlay.classList.add("show");
+
+  const closeModal = document.getElementById("close_modal");
+  closeModal.onclick = function () {
+    modalProduct.classList.remove("show");
+    modalProduct.style.pointerEvents = "none";
+    overlay.classList.remove("show");
+  };
+
+  overlay.onclick = function () {
+    closeModal.click();
+  };
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  let quantity = 1;
+  const pricePerUnit = 1900000; // Giá mỗi sản phẩm
+  function updateTotalPrice(quantity) {
+    const total = pricePerUnit * quantity;
+    document.getElementById("total_price").textContent =
+      total.toLocaleString("vi-VN") + "đ"; // Định dạng tiền tệ
+  }
+
+  const decreaseButton = document.querySelector(".decrease");
+  const increaseButton = document.querySelector(".increase");
+  const quantityInput = document.querySelector(".quantity_model");
+
+  decreaseButton.addEventListener("click", () => {
+    if (quantity > 1) {
+      quantity--;
+      quantityInput.value = quantity;
+      updateTotalPrice(quantity);
+    }
+  });
+
+  increaseButton.addEventListener("click", () => {
+    quantity++;
+    quantityInput.value = quantity;
+    updateTotalPrice(quantity);
+  });
+});
